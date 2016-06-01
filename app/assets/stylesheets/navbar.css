@@ -1,0 +1,21 @@
+button {
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	margin-top: 20px;
+	border: none;
+	font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	padding-top: 10px;
+
+}
+
+.navbar {
+	position: absolute;
+	width: 100px;
+	height: 500px;
+	right: 0;
+	margin-top: 5%;
+}
