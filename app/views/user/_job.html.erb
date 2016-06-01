@@ -1,26 +1,27 @@
 <div class="jobs_form">
+<h2 id="title">Work Experience</h2>
 <%= form_for :jobs do |form| %>
 
-    <%= form.label :start_date %>
-    <%= form.date_field :start_date, type: 'Start Date' %></br>
+    <%= form.label 'Start Date' %>
+    <%= form.date_field :start_date %></br>
 
-    <%= form.label :end_date %>
-    <%= form.date_field :end_date, type: 'End Date' %></br>
+    <%= form.label 'End Date' %>
+    <%= form.date_field :end_date %></br>
 
-     <%= form.label :position %>
-    <%= form.text_field :position, type: 'Position Title' %>  </br> 
+     <%= form.label 'Position Title' %>
+    <%= form.text_field :position %>  </br> 
 
-    <%= form.label :company %>
-    <%= form.text_field :company, type: 'Employer Name' %></br>
+    <%= form.label 'Employer Name' %>
+    <%= form.text_field :company %></br>
 
-    <%= form.label :description %>
-    <%= form.text_field :description, type: 'Tell us about your role & responsibilities' %></br>
+    <%= form.label 'Tell us about your role & responsibilities' %>
+    <%= form.text_field :description  %></br>
 
-    <%= form.label :location %>
-    <%= form.text_field :location, type: 'Which city are you based in?' %></br>
+    <%= form.label 'Which city are/were you based in?' %>
+    <%= form.text_field :location %></br>
 
-    <%= form.label :link %>
-    <%= form.text_field :link, type: 'Include a link to your portfolio' %></br>  
+    <%= form.label 'Include a link to your portfolio' %>
+    <%= form.text_field :link %></br>  
 
     <%= form.submit %>
 

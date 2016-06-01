@@ -1,0 +1,20 @@
+<div class="language_form">
+<h2 id="title">Languages</h2>
+<%= form_for :language do |form| %>
+
+    <%= form.label 'What language(s) do you speak?' %>
+    <%= form.text_field :name %></br>
+
+    <%= form.label 'Level of Proficiency' %>
+    <%= form.text_field :level %></br>
+
+    <%= form.label 'Writing Proficiency' %>
+    <%= form.text_field :written %></br>
+
+    <%= form.label 'Speaking Proficiency' %>
+    <%= form.text_field :spoken %></br>
+
+    <%= form.submit %>
+
+<% end %>
+</div>

@@ -1,8 +1,9 @@
 <div class="about_form">
+<h2 id="title">About</h2>
 <%= form_for :about do |form| %>
 
-    <%= form.label :description %>
-    <%= form.text_field :description, type: 'Bio' %></br>
+    <%= form.label 'Biography' %>
+    <%= form.text_area :description %></br>
 
     <%= form.submit %>
 
