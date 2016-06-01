@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+.navbar {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+}
+
+.workexperience_container {
+	height: 800px;
+}
+
+.education_container {
+	height: 800px;
+}
+
+.about_container {
+	height: 800px;
+}
+
+.header_container {
+	height: 400px;
+	margin-top: 100px;
+}
+
+.footer {
+	height: 200px;
+}
+
+.section_header {
+	width: 60%;
+	text-align: center;
+}
+
+.opaque {
+	transition-duration: 3s;
+	background-color: #779ECB;
+	opacity: 30%;
+}
+
+.skill_container {
+	height: 800px;
+}
+
+.skill_text {
+	text-align: left;
+	width: 43%;
+}
+
+li {
+	font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	text-align: left;
+	padding-top: 10px;
+}
