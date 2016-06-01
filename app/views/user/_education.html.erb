@@ -1,0 +1,28 @@
+<div class="education_form">
+<%= form_for :education do |form| %>
+
+    <%= form.label 'Name of Institution' %>
+    <%= form.text_field :institution %></br>
+
+    <%= form.label 'Education type' %>
+    <%= form.text_field :type %></br>
+
+    <%= form.label 'Programme Type' %>
+    <%= form.text_field :programme %></br>
+
+    <%= form.label 'Start Date' %>
+    <%= form.date_field :start_date %></br>
+
+    <%= form.label 'End Date' %>
+    <%= form.date_field :end_date %></br>
+
+    <%= form.label 'Description' %>
+    <%= form.text_field :description %></br>
+
+    <%= form.label 'Grade' %>
+    <%= form.text_field :grade %></br>
+
+    <%= form.submit %>
+
+<% end %>
+</div>
