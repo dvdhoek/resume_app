@@ -10,8 +10,8 @@ class CreateEducation < ActiveRecord::Migration
 			t.date :end_date
 			t.string :description
 			t.string :grade        
-
 			t.timestamps null: false
+			
 		end
 	end
 end

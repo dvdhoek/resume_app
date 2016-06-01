@@ -1,0 +1,34 @@
+<%= form_for :personal_info do |form| %>
+
+    <%= form.label :dob %>
+    <%= form.date_field :dob, type: 'Date of Birth' %>
+
+    <%= form.label :first_name %>
+    <%= form.text_field :start_date, type: 'First Name' %>
+
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, type: 'Last Name' %>
+
+     <%= form.label :gender %>
+
+      <%= form.select :gender, options_for_select(
+      
+        [["Male", "Male"], 
+        ["Female", "Female"],
+        ["Other", "Other"]])%>
+
+    <%= form.label :contact_number %>
+    <%= form.text_field :contact_number, type: 'Contact Number' %>
+
+    <%= form.label :address_street %>
+    <%= form.text_field :address_street, type: 'Street Address' %>
+
+    <%= form.label :address_city %>
+    <%= form.text_field :address_city, type: 'City' %>
+
+    <%= form.label :address_country %>
+    <%= form.text_field :address_country, type: 'Country' %>    
+
+    <%= form.submit %>
+
+<% end %>

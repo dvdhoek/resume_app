@@ -61,15 +61,16 @@ ActiveRecord::Schema.define(version: 20160601042252) do
 
   create_table "personal_info", force: :cascade do |t|
     t.integer  "user_id"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.string   "position"
-    t.string   "company"
-    t.string   "description"
-    t.string   "location"
-    t.string   "link"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "dob"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "gender"
+    t.string   "contact_number"
+    t.string   "address_street"
+    t.string   "address_city"
+    t.string   "address_country"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -78,7 +79,7 @@ ActiveRecord::Schema.define(version: 20160601042252) do
     t.date     "end_date"
     t.string   "link"
     t.string   "description"
-    t.string   "contract_Type"
+    t.string   "contract_type"
     t.string   "client"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -95,6 +96,7 @@ ActiveRecord::Schema.define(version: 20160601042252) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
+    t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
