@@ -8,20 +8,14 @@ Rails.application.routes.draw do
       only: [:create, :edit, :update]
   end
 
-  get "/sign_in" => "clearance/sessions#new", as: "sign_in"
-  delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
-  get "/sign_up" => "clearance/users#new", as: "sign_up"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#new'
+  get '/users/edit' => 'users#edit'
 
-  get 'user/edit'
 
-  get 'personal_info/edit'
-
-  get 'jobs/edit'
 
 
   # Example of regular route:
