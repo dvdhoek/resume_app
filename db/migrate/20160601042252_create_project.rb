@@ -7,11 +7,8 @@ class CreateProject < ActiveRecord::Migration
 			t.date :end_date
 			t.string :link
 			t.string :description
-			t.string :contract_Type
-			t.string :client
-			
-
-
+			t.string :contract_type
+			t.string :client			
 			t.timestamps null: false
 		end
 	end
