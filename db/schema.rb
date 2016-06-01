@@ -11,9 +11,92 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160601042252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "about", force: :cascade do |t|
+    t.string   "description"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "education", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "institution"
+    t.string   "type"
+    t.string   "program"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "description"
+    t.string   "grade"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "position"
+    t.string   "company"
+    t.string   "description"
+    t.string   "location"
+    t.string   "link"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "language", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "level"
+    t.integer  "written"
+    t.integer  "spoken"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "personal_info", force: :cascade do |t|
+    t.integer  "user_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "position"
+    t.string   "company"
+    t.string   "description"
+    t.string   "location"
+    t.string   "link"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer  "user_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "link"
+    t.string   "description"
+    t.string   "contract_Type"
+    t.string   "client"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.integer  "rating"
+    t.string   "endorsements"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
