@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160601060655) do
     t.integer  "user_id"
     t.string   "institution"
     t.string   "type"
-    t.string   "program"
+    t.string   "programme"
     t.date     "start_date"
     t.date     "end_date"
     t.string   "description"
