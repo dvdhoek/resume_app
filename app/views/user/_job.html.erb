@@ -1,0 +1,28 @@
+<div class="jobs_form">
+<%= form_for :jobs do |form| %>
+
+    <%= form.label :start_date %>
+    <%= form.date_field :start_date, type: 'Start Date' %></br>
+
+    <%= form.label :end_date %>
+    <%= form.date_field :end_date, type: 'End Date' %></br>
+
+     <%= form.label :position %>
+    <%= form.text_field :position, type: 'Position Title' %>  </br> 
+
+    <%= form.label :company %>
+    <%= form.text_field :company, type: 'Employer Name' %></br>
+
+    <%= form.label :description %>
+    <%= form.text_field :description, type: 'Tell us about your role & responsibilities' %></br>
+
+    <%= form.label :location %>
+    <%= form.text_field :location, type: 'Which city are you based in?' %></br>
+
+    <%= form.label :link %>
+    <%= form.text_field :link, type: 'Include a link to your portfolio' %></br>  
+
+    <%= form.submit %>
+
+<% end %>
+</div>

@@ -1,0 +1,31 @@
+<div class="language_form">
+<%= form_for :language do |form| %>
+
+    <%= form.label :start_date %>
+    <%= form.text_field :start_date, type: 'Start Date' %></br>
+
+    <%= form.label :name %>
+    <%= form.text_field :name, type: 'What language(s) do you speak?' %></br>
+
+    <%= form.label :start_date %>
+    <%= form.text_field :start_date, type: 'Start Date' %></br>
+
+    <%= form.label :start_date %>
+    <%= form.text_field :start_date, type: 'Start Date' %></br>
+
+    <%= form.submit %>
+
+<% end %>
+</div>
+
+
+
+
+
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "level"
+    t.integer  "written"
+    t.integer  "spoken"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
