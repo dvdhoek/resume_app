@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
   has_many :personal_info
   has_many :projects
   has_many :skills
-  has_many :abouts
+  has_one :about
 end
