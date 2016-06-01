@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601042252) do
+ActiveRecord::Schema.define(version: 20160601060655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,16 +61,15 @@ ActiveRecord::Schema.define(version: 20160601042252) do
 
   create_table "personal_info", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "dob"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "gender"
-    t.string   "contact_number"
-    t.string   "address_street"
-    t.string   "address_city"
-    t.string   "address_country"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "position"
+    t.string   "company"
+    t.string   "description"
+    t.string   "location"
+    t.string   "link"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -79,7 +78,7 @@ ActiveRecord::Schema.define(version: 20160601042252) do
     t.date     "end_date"
     t.string   "link"
     t.string   "description"
-    t.string   "contract_type"
+    t.string   "contract_Type"
     t.string   "client"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -96,9 +95,14 @@ ActiveRecord::Schema.define(version: 20160601042252) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "encrypted_password", limit: 128
+    t.string   "confirmation_token", limit: 128
+    t.string   "remember_token",     limit: 128
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", using: :btree
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
 end
