@@ -1,0 +1,27 @@
+<div class="projects_form">
+<h2 id="title">Projects</h2>
+<%= form_for :projects do |form| %>
+
+    <%= form.label 'Start Date' %>
+    <%= form.date_field :start_date %></br>
+
+    <%= form.label 'End Date' %>
+    <%= form.date_field :end_date %></br>
+
+    <%= form.label 'Client/Employer Name' %>
+    <%= form.text_field :client %></br>
+
+    <%= form.label 'Description of Your Role' %>
+    <%= form.text_area :description %></br>
+
+    <%= form.label 'Link' %>
+    <%= form.text_field :link %></br>
+
+    <%= form.label 'Contract Type' %>
+    <%= form.text_field :contract_type %></br>
+
+    <%= form.submit %>
+
+<% end %>
+</div>
+

@@ -1,0 +1,17 @@
+<div class="skills_form">
+<h2 id="title">Skills</h2>
+<%= form_for :skills do |form| %>
+
+    <%= form.label 'Skill' %>
+    <%= form.text_field :title %></br>
+
+    <%= form.label 'Ratings' %>
+    <%= form.text_area :description %></br>
+
+    <%= form.label 'Endorsements' %>
+    <%= form.text_field :endorsements %></br>
+
+    <%= form.submit %>
+
+<% end %>
+</div>
