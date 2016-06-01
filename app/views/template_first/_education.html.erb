@@ -1,50 +1,17 @@
 <div class="education_container">
 	<h2 class="section_header"> Education </h2>
 		<table>
-			<tr>
-			    <td> 
-			    	<p class="institution" id="location">NEXT Academy </p>
-			    	<p class="institution" id="date">2016- now</p>
-			    </td>
-
-			    <td>
-			    	<p class="table_text"> 	11-week web developers boot camp @ NEXT Academy, Kuala Lumpur and graduated in April 2016. The course entailed Ruby (on Rails), Javascript, CSS3, HTML5, jQuery and SQL. </p>
-			    </td>
-			 </tr>
-
-		  <tr>
-		    <td> 
-		    	<p class="institution" id="location">Vrije Universiteit Amsterdam </p>
-		    	<p class="institution" id="date">2014- 2015</p>
-		    </td>
-
-		    <td>
-		    	<p class="table_text"> 	MBA with a specialization in Financial Management at the Vrije Universiteit (Amsterdam). In this program I specialized in Banking and Insurance with specialization courses as Institutional Investments, Corporate Valuation and Corporate Finance. Master thesis focused on the winner’s curse in the Indian, Singapore and Kuala Lumpur Stock exchange for IPOs, combined with comparing excess returns when accounting for interest and opportunity costs. </p>
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td> 
-		    	<p class="institution" id="location">Vrije Universiteit Amsterdam </p>
-		    	<p class="institution" id="date">2010- 2014</p>
-		    </td>
-
-		    <td>
-		    	<p class="table_text"> Studied Business Administration at the Vrije Universiteit (Amsterdam). Followed a minor in Entrepreneurship and specialized in Financial Management. For my Bachelor thesis I studied the possibilities for European dairy farmers and producers to hedge their price risk on foreign future markets. </p>
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td> 
-		    	<p class="institution" id="location">Stedelijk Gymnasium Leiden </p>
-		    	<p class="institution" id="date">2003- 2009</p>
-		    </td>
-
-		    <td>
-		    	<p class="table_text">Attended high school at the Stedelijk Gymnasium Leiden, which is 	the highest program in the Netherlands, comparable to Grammar school.  </p>
-		    </td>
-		  </tr>
-
+			<% @user.education.each do |education| %>
+				<tr>
+				    <td> 
+				    	<p class="institution" id="location"><%= education.institution %></p>
+				    	<p class="institution" id="date"><%= education.start_date"-" education.end_date %></p>
+				    </td>
+				    <td>
+				    	<p class="table_text"> <%= education.description %> </p>
+				    </td>
+				</tr>
+			<% end %>
 		</table>
 </div>
 

@@ -1,0 +1,29 @@
+<div class="jobs_form">
+<h2 id="title">Work Experience</h2>
+<%= form_for :jobs do |form| %>
+
+    <%= form.label 'Start Date' %>
+    <%= form.date_field :start_date %></br>
+
+    <%= form.label 'End Date' %>
+    <%= form.date_field :end_date %></br>
+
+     <%= form.label 'Position Title' %>
+    <%= form.text_field :position %>  </br> 
+
+    <%= form.label 'Employer Name' %>
+    <%= form.text_field :company %></br>
+
+    <%= form.label 'Tell us about your role & responsibilities' %>
+    <%= form.text_field :description  %></br>
+
+    <%= form.label 'Which city are/were you based in?' %>
+    <%= form.text_field :location %></br>
+
+    <%= form.label 'Include a link to your portfolio' %>
+    <%= form.text_field :link %></br>  
+
+    <%= form.submit %>
+
+<% end %>
+</div>

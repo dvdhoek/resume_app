@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
+  resources :passwords, controller: "clearance/passwords", only: [:create, :new]
+  resource :session, controller: "clearance/sessions", only: [:create]
+
+  resources :users, controller: "clearance/users", only: [:create] do
+    resource :password,
+      controller: "clearance/passwords",
+      only: [:create, :edit, :update]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'welcome#new'
+  get '/users/edit' => 'users#edit'
 
-  get 'user/edit'
 
-  get 'personal_info/edit'
 
-  get 'jobs/edit'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
