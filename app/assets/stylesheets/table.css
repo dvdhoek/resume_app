@@ -1,0 +1,26 @@
+td {
+	width: 200px;
+}
+
+.institution {
+	width: 150px;
+	padding-top: 10px;
+}
+
+#date {
+	padding-top: 5px;
+	font-size: 12px;
+}
+
+#location {
+
+}
+
+.table_text {
+	padding-top: 10px;
+	width: 400px;
+}
+
+tr {
+	padding-top: 30px;
+}

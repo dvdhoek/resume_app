@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Diederik</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<div class="navbar"> 
+	<button class="header_btn">HEADER</button>
+	<button class="about_btn">ABOUT</button>
+	<button class="education_btn">EDUCATION</button>
+	<button class="workexperience_btn">Work</button>
+	<button class="skills_btn">Skills</button>
+</div>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
